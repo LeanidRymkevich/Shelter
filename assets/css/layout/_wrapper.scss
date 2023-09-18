@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: calc( $desktop-wrapper-width + 15px * 2); /* + 15px * 2 padding for desktop*/
+  width: 96.094%; 
+  padding: 0 1.5rem; 
+  margin: 0 auto;
+
+  @include media-max-width(670px) {
+    padding: 0;
+    width: 93.75%;
+  }
+}

@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.header__row {
+  @extend %flex-container;
+  align-items: center;
+
+  @include media-max-width(670px) {
+    width: 93.333%;
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  margin-right: 1.5rem;
+}
+
+.header__burger {
+  width: 30px;
+  height: 22px;
+  display: none;
+
+  @include  media-show-burger {
+    position: relative;
+    display: block;
+    z-index: 5;
+  }
+}
+
+.header__menu {
+  @include  media-show-burger {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-burger-menu-light;
+    margin-right: -100%;
+    transition: margin .5s ease;
+  }
+
+  &_active {
+    margin: 0;
+  }
+}

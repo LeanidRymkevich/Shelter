@@ -1,0 +1,42 @@
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-max-width(1009px) {
+    flex: 0 0 23.305%;
+  }
+
+  @include media-tablet{
+    flex-basis: 26.984%;
+  }
+
+  @include media-max-width(670px) {
+    flex-basis: 44.828%;
+  }
+}
+
+.option__icon {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 3rem;
+
+  @include media-max-width(670px) {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  img {
+    @include media-max-width(670px) {
+      width: 82.333%;
+    }
+  }
+}
+
+.option__name {
+  color: $color-dark-l;
+  white-space: nowrap;  
+  letter-spacing: 0.056em;
+}

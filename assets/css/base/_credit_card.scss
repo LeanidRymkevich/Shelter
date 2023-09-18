@@ -1,0 +1,36 @@
+.credit-card {
+  display: flex;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  background-color: $color-primary;
+  border-radius: 9px;
+  transition: background-color .5s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-light;
+  }
+
+  @include media-max-width(670px) {
+    align-items: center;
+  }
+}
+
+.credit-card__icon {
+  display: inline-block;
+  width: 3rem;
+  height: 2.3rem;
+  background: url('../icons/in_addition/credit-card.svg');
+  margin: 0 1.5rem 0 0;
+  flex-shrink: 0;
+}
+
+.credit-card__number {
+  margin: 0;
+  color: $color-dark-l;
+
+  @include media-max-width(670px) {
+    line-height: 1.1;
+  }
+}
+

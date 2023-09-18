@@ -1,0 +1,38 @@
+@mixin slider-button-effects($border-color: $color-primary, $background-color: $color-primary, $color: $color-dark-3xl) {
+  border-color: $border-color;
+  background-color: $background-color;
+  color: $color;
+}
+
+@mixin font($size, $height, $weight: 400, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin media-max-width($width) {
+  @media screen and (max-width : $width) { @content; }
+}
+
+@mixin media-tablet {
+  @media screen and (max-width : $tablet-width) { @content; }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width : $mobile-width) { @content; }
+}
+
+@mixin media-show-burger {
+  @media screen and (max-width : ($tablet-width - 0.5px)) { @content; }
+}
+
+// mixin for responsive font-size in px
+// values $from, $to are entered without units
+$max-width: 1280; // desktop layout size
+$min-width: 320; // mobile layout size
+@mixin responsive-font-size($from, $to) {
+	$diff: $from - $to;
+	$width: $max-width - $min-width;
+	font-size: calc(#{$to + px} + #{$diff} * ((100vw - #{$mobile-width}) / #{$width}));
+}

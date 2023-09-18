@@ -1,0 +1,26 @@
+.button {
+  border-radius: 10rem;
+  background: transparent;
+  padding: 1.5rem 4.5rem;
+
+  font-family: $font-primary;
+  @include font($size: 1.7rem, $height: 1.3, $color: $color-dark-3xl);
+  letter-spacing: 0.06em;
+  text-align: center;
+  white-space: nowrap;
+  @extend %slder-buttons-transition;
+
+  &_filled {
+    background-color: $color-primary;
+  }
+  
+  &_bordered {
+    border: 2px solid $color-primary;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    @include slider-button-effects($color-primary-light, $color-primary-light)
+  }
+}
+

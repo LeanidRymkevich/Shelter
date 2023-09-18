@@ -1,0 +1,34 @@
+%line-properties{
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  background-color: $color-primary;
+}
+
+.burger {
+  position: relative;
+  transition: transform .5s;
+
+  &::before {
+    content: "";
+    @extend %line-properties;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    @extend %line-properties;
+    bottom: 0;
+  }
+
+  &_active {
+    transform-origin: 50%;
+    transform: rotate(90deg);
+  }
+}
+
+.burger__line{
+  @extend %line-properties;
+  top: calc(50% - 1px);
+}

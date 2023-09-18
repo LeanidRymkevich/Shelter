@@ -1,0 +1,64 @@
+.slider__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.2rem;
+  height: 5.2rem;
+
+  font-family: $font-primary;
+  @include font($size : 2rem, $height: 1.15, $color: $color-dark-3xl);
+  letter-spacing: 0.06em;
+
+  border: 2px solid $color-primary;
+  border-radius: 10rem;
+  background-color: transparent;
+  @extend %slder-buttons-transition;
+
+  &:active,
+  &.slider__button_active{
+    @extend %slder-buttons-transition;
+    @include slider-button-effects();
+  }
+
+  &.slider__button_inactive {
+    pointer-events: none;
+    border-color: $color-dark-s;
+    color: $color-dark-s;
+    @include slider-button-effects($color-dark-s, transparent, $color-dark-s);
+  }
+
+  & svg path {
+    transition: fill .5s ease-in-out;
+  }
+
+  &.slider__button_inactive svg path {
+    fill: $color-dark-s;
+  }
+
+  &:hover {
+    cursor: pointer;
+    @include slider-button-effects($color-primary-light, $color-primary-light, $color-dark-3xl);
+  }
+
+  &:active{
+    @extend %slder-buttons-transition;
+    @include slider-button-effects($color-primary, $color-primary);
+  }
+
+  &_prev {
+    transform: rotate(-180deg);
+
+    @include media-max-width(730px) {
+      order: 2;
+      margin: 0 18px 0 0;
+    }
+  }
+
+  &_next {
+    @include media-max-width(730px) {
+      order: 3;
+      margin: 0 0 0 18px;
+    }
+  }
+}
+

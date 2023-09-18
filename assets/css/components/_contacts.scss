@@ -1,0 +1,150 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+  a {
+    filter: saturate(100%);
+    transition: filter .5s ease-in-out;
+  }
+  
+  a:hover {
+    filter: saturate(250%);
+  }
+
+  @include media-max-width(1051px) {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  @include media-max-width(670px) {
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.contacts__column {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    flex: 0 0 27.9rem;
+  }
+  
+  &:last-child {
+    flex: 0 0 30.2rem;
+  }
+
+  @include media-max-width(670px) {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+    &:first-child {
+      flex-basis: 0;
+      margin-bottom: 4rem;
+    }
+
+    &:last-child {
+      flex-basis: 0;
+    }
+  }
+}
+
+.contacts__purpose {
+  color: $color-light-2xl;
+
+  @include media-max-width(670px) {
+    width: 92.667%;
+    text-align: center;
+  }
+}
+
+.contacts__email, 
+.contacts__tel {
+  margin-top: 4rem;
+
+  @include media-tablet{
+    margin-top: 3.9rem;
+  }
+}
+
+.contacts__column {
+  a {
+    span{
+      color: $color-primary;
+    }
+  }
+}
+
+.email, 
+.tel,
+.address {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @include media-max-width(670px) {
+    justify-content: center;
+  }
+}
+
+.address {
+  @include media-mobile {
+    justify-content: flex-start;
+  }
+}
+
+.email__icon, 
+.tel__icon {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 3.2rem;
+  margin-right: 2rem;
+  background: url('../icons/footer/icon-email.svg');
+}
+
+.tel__icon {
+  background: url('../icons/footer/icon-phone.svg');
+}
+
+.address_1 {
+  margin-top: 3.4rem;
+
+  @include media-tablet{
+    margin-top: 3.1rem;
+  }
+
+  @include media-max-width(670px) {
+    margin-top: 3.9rem;
+  }
+}
+
+.address_2 {
+  margin-top: 3.2rem;
+
+  @include media-max-width(670px) {
+    margin-top: 4rem;
+  }
+}
+
+.address__icon {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 3.2rem;
+  margin-right: 2rem;
+  background: url('../icons/footer/icon-marker.svg');
+}
+
+.address__text,
+.tel__number,
+.email__address{
+  @include media-max-width(670px) {
+    font-size: 2rem;
+  }
+}

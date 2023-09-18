@@ -1,0 +1,11 @@
+%slder-buttons-transition {
+  transition: background-color .5s ease-in-out, 
+              border-color .5s ease-in-out, 
+              color .5s ease-in-out;
+}
+
+%flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

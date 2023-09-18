@@ -1,0 +1,34 @@
+/* Abstracts */
+@import "abstracts/fonts";
+@import "abstracts/variables";
+@import "abstracts/placeholders";
+@import "abstracts/mixins";
+
+/* Base */
+@import "base/base";
+@import "base/button";
+@import "base/burger";
+@import "base/card";
+@import "base/credit_card";
+@import "base/logo";
+@import "base/menu";
+@import "base/option";
+@import "base/slider_button";
+@import "base/slider";
+@import "base/pop_up";
+
+/* Layouts */
+@import "layout/wrapper";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+/* Components */
+@import "components/about";
+@import "components/contacts";
+@import "components/donation";
+@import "components/help";
+@import "components/in_addition";
+@import "components/not_only";
+@import "components/our_friends";
+

@@ -1,0 +1,30 @@
+.card {
+  flex: 0 1 270px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  border-radius: 9px;
+  background-color: $color-light-s;
+  transition: background-color .5s ease-in-out;
+
+  &:hover{
+    background-color: $color-light-2xl;
+  }
+}
+
+.card__picture {
+  width: 100%;
+  background-color: transparent;
+}
+
+.card__name {
+  @include font($size: 2rem, $height: 1.15, $weight: 400, $color: $color-dark-l);
+  letter-spacing: 0.06em;
+  margin: 3rem 0 3rem 0;
+}
+
+.card__button {
+  padding: 1.3rem 4.3rem;
+  line-height: 1.35;
+  margin-bottom: 3rem;
+}

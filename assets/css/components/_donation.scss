@@ -1,0 +1,35 @@
+.donation {
+  display: flex;
+  flex-direction: column;
+
+  @include media-max-width(710px) {
+    align-items: center;
+  }
+}
+
+.donation__title {
+  @include font($size: 1.5rem, $height: 1.1, $color: $color-dark-l);
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+
+  @include media-max-width(710px) {
+    text-align: center;
+    letter-spacing: 0;
+    margin: 0 0.1rem 2.35rem 0;
+  }
+}
+
+.donation__credit-card {
+  margin-bottom: 2rem;
+}
+
+.donation__info {
+  font-family: $font-secondary;
+  font-style: italic;
+  @include font($size: 1.2rem, $height: 1.5, $color: $color-dark-m);
+
+  @include media-max-width(710px) {
+    padding: 0 1rem;
+    text-align: justify;
+  }
+}
